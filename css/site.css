@@ -1,0 +1,466 @@
+@font-face {
+	font-family: 'ecoicon';
+	src:url('fonts/ecoicons/ecoicon.eot');
+	src:url('fonts/ecoicons/ecoicon.eot?#iefix') format('embedded-opentype'),
+	url('fonts/ecoicons/ecoicon.woff') format('woff'),
+	url('fonts/ecoicons/ecoicon.ttf') format('truetype'),
+	url('fonts/ecoicons/ecoicon.svg#ecoicon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family:'monaco';
+	src:url('fonts/monaco.ttf');
+}
+
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'codropsicons';
+	src: url('../fonts/codropsicons/codropsicons.eot');
+	src: url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'), url('../fonts/codropsicons/codropsicons.woff') format('woff'), url('../fonts/codropsicons/codropsicons.ttf') format('truetype'), url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+}
+
+div.circleEffect {
+	width: 240vw;
+	height: 240vw;
+	margin-left: -120vw;
+	margin-top: -120vw;
+	border-radius: 100%;
+	position: absolute;
+	will-change: transform;
+}
+
+.c-material-design{
+	text-decoration: none;
+	color:black;
+	border-bottom:3px solid #b4e7f8;
+}
+
+.c-material-design:active,.c-material-design:focus,.c-material-design:hover {
+	background:#b4e7f8;
+}
+
+.links{
+	font-family: 'Josefin Sans', serif;
+	font-weight: bold;
+}
+
+.circle{
+	width:100%;
+}
+
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Avenir, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
+	color: #2e343f;
+	background: #f8f8f8;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Content */
+
+.content {
+	padding: 3em 0;
+}
+
+.row {
+	width:100%;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	padding: 0 2em;
+}
+
+.box {
+	width: 100%;
+	height:40em;
+	border: 10px solid #f9f9f9;
+	background: #fff;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
+	position:relative;
+	-webkit-box-shadow: 8px 0px 15px 2px rgba(0,0,0,0.36);
+	-moz-box-shadow: 8px 0px 15px 2px rgba(0,0,0,0.36);
+	box-shadow: 8px 0px 15px 2px rgba(0,0,0,0.36);
+}
+
+.box:first-child{
+	width:100%;
+}
+.box:last-child {
+	overflow-y:scroll;
+	background: #222222;
+	-webkit-justify-content: center;
+	justify-content: flex-start;
+}
+
+.box--centered {
+	text-align: center;
+}
+
+pre {
+	padding: 0 2em;
+	margin: 0;
+	color: #436843;
+	tab-size: 2;
+	font-family: 'Inconsolata', monospace;
+	line-height: 1.5;
+	font-weight: bold;
+	font-size: 0.85em;
+}
+
+/* Download button style */
+
+.Download {
+	display: inline-block;
+	width: 300px;
+	height: 120px;
+}
+
+.content--related {
+	text-align: center;
+	font-weight: bold;
+}
+
+.media-item__title {
+	margin: 0;
+	padding: 0.5em;
+	font-size: 1em;
+}
+
+.sarcasm{
+	position:absolute;
+	width:100%;
+	top: 68%;
+	left: 0;
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+/*---------------------------------------------------------------------------*/
+
+.clearfix:before,
+.clearfix:after {
+	display: table;
+	content: '';
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+a {
+	outline: none;
+	color: #41ab6b;
+	text-decoration: none;
+}
+
+a:hover,
+a:focus {
+	color: #2e343f;
+}
+
+.codrops-header h1 a:hover{
+	text-decoration: underline;
+}
+/* Header */
+
+
+
+.codrops-header {
+	padding: 2em 1em 0;
+	text-align: center;
+	background: #f8f8f8;
+	margin-top: -2%
+}
+
+.codrops-header h1 {
+	margin: 0.5em 0 0;
+	font-size: 3.5em;
+	line-height: 1;
+}
+
+.codrops-header h1 span {
+	display: block;
+	padding: 0.5em 0 1em;
+	font-weight: normal;
+	font-size: 0.425em;
+}
+
+/* Top Navigation Style */
+
+.codrops-links {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.codrops-links::after {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 1px;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.1);
+	content: '';
+	-webkit-transform: rotate3d(0, 0, 1, 22.5deg);
+	transform: rotate3d(0, 0, 1, 22.5deg);
+}
+
+.codrops-icon {
+	display: inline-block;
+	margin: 0.5em;
+	padding: 0em 0;
+	width: 1.5em;
+	text-decoration: none;
+}
+
+.codrops-icon span {
+	display: none;
+}
+
+.codrops-icon:before {
+	margin: 0 5px;
+	text-transform: none;
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-family: 'codropsicons';
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+}
+
+.codrops-icon--drop:before {
+	content: "\e001";
+}
+
+.codrops-icon--prev:before {
+	content: "\e004";
+}
+
+.hi-icon-earth:before {
+	content: "\e002";
+}
+
+#set-1 {
+	background: #41ab6b;
+	max-height: 12em;
+}
+
+.hi-icon {
+	display: inline-block;
+	font-size: 0px;
+	cursor: pointer;
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+	color: #fff;
+}
+
+.hi-icon:after {
+	pointer-events: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	content: '';
+	-webkit-box-sizing: content-box; 
+	-moz-box-sizing: content-box; 
+	box-sizing: content-box;
+}
+
+.hi-icon:before {
+	font-family: 'ecoicon';
+	speak: none;
+	font-size: 48px;
+	line-height: 90px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	display: block;
+	-webkit-font-smoothing: antialiased;
+} 
+
+.hi-icon-wrap {
+	text-align: center;
+	margin: 0 auto;
+	padding: 2em 0 3em;
+}
+
+.hi-icon-effect-1 .hi-icon {
+	background: rgba(255,255,255,0.1);
+	-webkit-transition: background 0.2s, color 0.2s;
+	-moz-transition: background 0.2s, color 0.2s;
+	transition: background 0.2s, color 0.2s;
+}
+
+.hi-icon-effect-1 .hi-icon:after {
+	top: -7px;
+	left: -7px;
+	padding: 7px;
+	box-shadow: 0 0 0 4px #fff;
+	-webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+	-webkit-transform: scale(.8);
+	-moz-transition: -moz-transform 0.2s, opacity 0.2s;
+	-moz-transform: scale(.8);
+	-ms-transform: scale(.8);
+	transition: transform 0.2s, opacity 0.2s;
+	transform: scale(.8);
+	opacity: 0;
+}
+
+/* Effect 1a */
+.hi-icon-effect-1a .hi-icon:hover {
+	background: rgba(255,255,255,1);
+	color: #41ab6b;
+}
+
+.hi-icon-effect-1a .hi-icon:hover:after {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	opacity: 1;
+}
+
+.click-globe{
+	color:white;
+	font-size: 1.2em;
+}
+
+.blackBoard{
+	font-family: 'monaco';
+	color:#00FF00;
+	font-weight: bold;
+	padding:5%;
+	margin-left:11%;
+	font-size: 1.2rem;
+}
+
+.scramble{
+	font-family: 'monaco';
+	color:#00FF00;
+	font-weight: bold;
+	padding:5%;
+	font-size:1.2rem;
+	margin-left:25%;
+	margin-top: -13%;
+}
+
+.countDown{
+	font-family: 'monaco';
+	font-size: 10rem;
+	color:#00FF00;
+	font-weight: bold;
+}
+
+.dots{
+	margin-top:-5%;
+	font-size:2rem;
+}
+
+.pushRight{
+	margin-right: 0.5%;
+}
+
+.click-globe div:nth-child(17),
+.click-globe div:nth-child(18),
+.click-globe div:nth-child(19),
+.click-globe div:nth-child(20),
+.click-globe div:nth-child(21),
+.click-globe div:nth-child(22),
+.click-globe div:nth-child(23),
+.click-globe div:nth-child(24),
+.click-globe div:nth-child(25),
+.click-globe div:nth-child(26),
+.click-globe div:nth-child(27),
+.click-globe div:nth-child(28),
+.click-globe div:nth-child(29),
+.click-globe div:nth-child(30),
+.click-globe div:nth-child(31){
+	color:#ffdb00;
+}
+
+
+
+.fa-arrow-up{
+	font-size: 3rem;
+	position: fixed;
+	bottom: 4%;
+	right:5%;
+	z-index:100;
+	cursor: pointer;
+	background: #41ab6b;
+	color:white;
+	padding:0.5%;
+	border-radius: 20%;
+}
+
+.blackBoardMagic{
+	margin-top:25%;
+}
+
+.selective-section{
+	display:none;
+}
+
+.blockquote{
+	background:#ffdb00;
+	color:black;
+	padding:5%;
+
+}
+
+@media screen and (max-width: 60em) {
+	.row {
+		display: block;
+		margin-bottom: 3em;
+	}
+
+	.box {
+		width: 100%;
+		padding: 1em;
+		background: transparent;
+	}
+	.sarcasm{
+		width:100%;
+	}
+
+	#set-1, .hi-icon-wrap{
+		overflow-x:scroll;
+	}
+	.click-globe{
+		font-size:1rem;
+	}
+}
+
+@media screen and (max-width: 40em) {
+	.codrops-header h1 {
+		font-size: 2.8em;
+	}
+
+	.blackBoard, .scramble{
+		font-size:1rem;
+	}
+}

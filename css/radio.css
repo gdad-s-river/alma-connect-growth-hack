@@ -1,0 +1,78 @@
+/* =============================================
+* RADIO BUTTONS
+=============================================== */
+
+#radios label {
+	cursor: pointer;
+	position: relative;
+}
+
+#radios label + label {
+	margin-left: 15px;
+}
+
+input[type="radio"] {
+	opacity: 0; /* hidden but still tabable */
+	position: absolute;
+}
+
+input[type="radio"] + span {
+	font-family: 'Material Icons';
+	color: #B3CEFB;
+	border-radius: 50%;
+	padding: 12px;
+	transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+}
+
+input[type="radio"]:checked + span {
+	color: #D9E7FD;
+	background-color: #4285F4;
+}
+
+input[type="radio"]:focus + span {
+	color: #fff;
+}
+
+.radio-icons{
+	font-size: 8rem;
+}
+/* ================ TOOLTIPS ================= */
+
+#radios label:hover::before {
+	content: attr(data-value);
+	font-family: monaco, sans-serif;
+	text-transform: capitalize;
+	font-size: 1rem;
+	position: absolute;
+	top: 170%;
+	color: #fff;	
+	padding: 5%;
+	border-radius: 3px;
+	display: block;
+	font-weight: bold;
+}
+
+#radios label:nth-child(1):hover::before {
+	left: 0;
+	right: 0;
+}
+
+#radios label:nth-child(2):hover::before {
+	right:30%;
+}
+
+
+/* =============================================
+* CENTERING, CONTAINER STYLING ETC || IGNORE
+=============================================== */
+
+#radios {
+	text-align: center;
+	margin: 24% auto 0;
+}
+
+.container-radio {
+	margin: 0 auto;
+	display:none;
+}
